@@ -1,4 +1,11 @@
 class CreatePosts < ActiveRecord::Migration
   def change
+  	create_table :posts do |t|
+  		t.belongs_to :user
+  		t.binary :picture
+  		t.text :content
+
+  		t.timestamps
+  	end
   end
 end
