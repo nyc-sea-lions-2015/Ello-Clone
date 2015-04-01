@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
-
+  <link rel='stylesheet' href='/stylesheets/normalize.css' type='text/css' /> 
+  <link rel='stylesheet' href='/css/application.css' type='text/css' />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-
-  <title></title>
+  <title><%= @title || "Ello Clone" %></title>
 </head>
 <body>
-  <%= yield %>
+  <header>
+    <div id='header'>
+      <img src="">
+        <div id="header_words">
+          <p> Manifesto About Store Privacy
+          <% if session[:user_id] %>
+            <a id="home" href='/users/home/<%=session[:user_id]%>'>Home | </a>
+            <a href='/auth/logout' id='logout'> Logout</a>
+          <% else %>
+            <a href='/auth/login' id='login'> Login</a> 
+          <% end %>
+            </p>
+        </div>
+    </div>
+    
+  </header>
+  
+    <%= yield %>
 </body>
 </html>
