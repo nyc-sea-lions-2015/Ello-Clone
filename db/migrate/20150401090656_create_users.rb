@@ -1,14 +1,14 @@
 class CreateUsers < ActiveRecord::Migration
   def change
   	create_able :users do |t|
-  		t.string :email
-  		t.string :password_digest
-  		t.string :name
-  		t.text :bio
-  		t.binary :header_image
-  		t.binary :avatar
+  		t.string :email, null: false, unique: true
+  		t.string :password_digest, null: false
+  		t.string :name, null: true
+  		t.text   :bio, null: true
+  		t.binary :header_image, null: true
+  		t.binary :avatar, null: true
 
-  		t.timestamps
+  		t.timestamps, null: false
   	end
   end
 end
