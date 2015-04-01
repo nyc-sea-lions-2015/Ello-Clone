@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
 	has_many :following, :class_name => 'Following', :foreign_key => 'follower_id' 
 
 	has_secure_password
+
+	validates :email, :password_digest, presence: true
+	validates :email, uniqueness: true
 end
