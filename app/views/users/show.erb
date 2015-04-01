@@ -10,12 +10,11 @@
 <div id="user_prof">
 	<p class="user_attr">@<%=@user.user_name%></p>
 	<p class="user_attr">about: <%=@user.bio%></p>
-	<a href='/users/home/<%=@user.id%>/posts/new'><p class="user_attr">add post <%=@user.bio%></p></a>
 </div>
 <div >
 	<%@user.posts.each do |post|%>
 		<a href='/posts/<%=post.id%>/comments'><img id="posts" src='<%=post.image%>'></a>
-		<%=post.content%>
+		<p class='post_content'><%=post.content%><p>
 
 	<% end%>
 </div>

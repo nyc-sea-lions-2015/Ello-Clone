@@ -27,6 +27,12 @@
 	text-decoration: none !important;
 }
 
+#tagline:visited {
+	color: #999999 !important;
+	text-decoration: none !important;
+
+}
+
 #header {
 	background-color: #333333;
 	width: 100%;
@@ -93,5 +99,10 @@ footer {
 	border: solid 1px #bbb;
 	margin-left: 24em;
 	margin-top: 2em;
+}
+
+#sign_up:visited {
+	text-decoration: none !important;
+	color: #333 !important;
 }
 

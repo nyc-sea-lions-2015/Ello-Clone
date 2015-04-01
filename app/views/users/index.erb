@@ -10,11 +10,20 @@
 <div id="user_prof">
 	<p class="user_attr">@<%=@user.user_name%></p>
 	<p class="user_attr">about: <%=@user.bio%></p>
+
+	<a id='edit_account' href="/users/<%=@user.id%>/edit"><p class="user_attr">edit account</p></a>
+
+	<a id='add_post' href='/users/home/<%=@user.id%>/posts/new'><p class="user_attr">add post</p></a>
+
+	<form action='/users/<%=@user.id%>/delete' method='post'>
+	  <input type='hidden' name='_method' value='delete'/>
+	  <input id="account_delete" class ="button" type='Submit' value='Delete Account' />
+
+
 </div>
-<div >
+<div id='post_section' >
 	<%@user.posts.each do |post|%>
 		<a href='/posts/<%=post.id%>/comments'><img id="posts" src='<%=post.image%>'></a>
-		<p><%=post.content%>
-
+		<p class='post_content'><%=post.content%></p>
 	<% end%>
 </div>

@@ -1,0 +1,12 @@
+<div id="user_prof_edit">
+	<form action='/users/<%= @user.id %>' method='post'>
+			<input type='hidden' name='_method' value='put'/>
+			<input type='text' placeholder='user name' name='user_name' value='<%= @user.user_name %>'/>
+			<input type='text' placeholder='email' name='email' value='<%= @user.email %>'/>
+			<input type='text' placeholder='bio' name='bio' value='<%= @user.bio %>'/>
+			<input type='text' placeholder='avatar' name='avatar' value='<%= @user.avatar %>'/>
+			<input type='text' placeholder='header image' name='header_image' value='<%= @user.header_image %>'/>
+			<input type='submit' value='Edit'>
+	</form>
+
+</div>

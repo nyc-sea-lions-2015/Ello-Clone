@@ -32,3 +32,20 @@
 	margin-top: 2em;
 
 }
+
+.all_av {
+	height: 4em;
+	width: 4em;
+	border-radius: 100%;
+}
+
+.user_name_list {
+	font-family: 'Cutive', serif, 'Lekton', sans-serif;
+}
+
+.post_content {
+	font-family: 'Cutive', serif, 'Lekton', sans-serif;
+	margin-left: 18em;
+}
+
+}

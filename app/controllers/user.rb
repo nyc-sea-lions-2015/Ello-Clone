@@ -1,13 +1,23 @@
+get '/users' do
+	@users = User.all
+	erb :'users/all'
+end
+
 get '/users/:id' do
 	@user = User.find_by(:id => params[:id])
 	@posts=@user.posts
-	erb :'users/index'
+	erb :'users/show'
+end
+
+get '/users/:id/edit' do
+	@user = User.find_by(:id => params[:id])
+	@posts=@user.posts
+	erb :'users/edit'
 end
 
 get '/users/home/:id' do
 	@user = User.find_by(:id => params[:id])
-	p @user
-	erb :'users/show'
+	erb :'users/index'
 end
 
 
@@ -31,4 +41,10 @@ put '/users/:id' do
 	else
 		[404, 'that user does not exist']
 	end
+end
+
+delete '/users/:id/delete' do
+	@user= Post.find_by(:id => params[:id])
+	@user.destroy
+	redirect '/'
 end

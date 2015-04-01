@@ -15,12 +15,13 @@ end
 get '/users/home/:id/posts/new' do
 	@user = User.find_by(:id => params[:id])
 
-	erb :'posts/new'
+	erb :'posts/new', layout: !request.xhr?
 end
 
 post '/users/home/:id/posts/new' do
 	@user = User.find_by(:id => params[:id])
 	@post = Post.new(image: params[:image],
+					content: params[:content],
 					user_id: session[:user_id])
 	@comments = @post.comments
 
@@ -35,4 +36,5 @@ end
 delete '/posts/:id/comments' do
 	@post=Post.find_by(:id => params[:id])
 	@post.destroy
+	redirect back
 end

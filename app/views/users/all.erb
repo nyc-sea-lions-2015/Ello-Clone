@@ -1,0 +1,4 @@
+<%@users.each do |user|%>
+	<p class='user_name_list'>@<%=user.user_name%></p>
+	<a href='/users/<%=user.id%>'><img class='all_av' src="<%=user.avatar%>"></a>
+<%end%>

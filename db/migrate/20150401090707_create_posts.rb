@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration
   	create_table :posts do |t|
   		t.belongs_to :user, null: false
   		t.string :image, null: false
-  		t.text :content, null: true
+  		t.string :content, null: true
 
   		t.timestamps null: false
   	end
