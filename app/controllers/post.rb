@@ -4,13 +4,17 @@ get '/posts/:id/comments' do
 	erb :'posts/show'
 end
 
-get '/users/:id/posts' do
+get '/users/:id/posts/:id' do
 	@user=User.find_by(:id => params[:id])
-	@posts=@user.posts
+	@post = Post.find_by(:id => params[:id])
+	@comments = @post.comments
+	p @post
+	erb :'posts/show'
 end
 
 get '/users/home/:id/posts/new' do
 	@user = User.find_by(:id => params[:id])
+
 	erb :'posts/new'
 end
 

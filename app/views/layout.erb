@@ -3,6 +3,9 @@
 <head>
   <link rel='stylesheet' href='/stylesheets/normalize.css' type='text/css' /> 
   <link rel='stylesheet' href='/css/application.css' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <title><%= @title || "Ello Clone" %></title>
@@ -10,14 +13,15 @@
 <body>
   <header>
     <div id='header'>
-      <img src="">
+      <img id='icon' src="/imgs/ello_icon.png">
+      <p id="motto">Simple, beautiful & ad-free.</p>
         <div id="header_words">
-          <p> Manifesto About Store Privacy
+          <p id='tagline'> Manifesto About Store Privacy
           <% if session[:user_id] %>
-            <a id="home" href='/users/home/<%=session[:user_id]%>'>Home  </a>
+            <a id="home" href='/users/home/<%=session[:user_id]%>'>Home</a>
             <a href='/auth/logout' id='logout'> Logout</a>
           <% else %>
-            <a href='/auth/login' id='login'> Login</a> 
+            <a href='/auth/login' id='login'>Login</a> 
           <% end %>
             </p>
         </div>

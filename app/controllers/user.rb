@@ -6,7 +6,8 @@ end
 
 get '/users/home/:id' do
 	@user = User.find_by(:id => params[:id])
-	@followings = @user.followings
+	@followings = @user.following
+	p @followings
 	erb :'users/index'
 end
 

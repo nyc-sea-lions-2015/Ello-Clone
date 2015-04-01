@@ -1,0 +1,14 @@
+<div id="user_prof">
+	<p class="user_attr">user: <%=@user.user_name%></p>
+	<p class="user_attr">name: <%=@user.name%></p>
+	<p class="user_attr">about: <%=@user.bio%></p>
+	<p class="user_footer"><a href=>submissions</a></p>
+	<p class="user_footer"><a href>comments</a></p>
+</div>
+
+<div>
+	<%@user.posts.each do |post|%>
+		<%=post.image%>
+		<%=post.content%>
+	<% end%>
+</div>

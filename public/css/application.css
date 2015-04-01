@@ -1,0 +1,46 @@
+#icon {
+	height: 3.8em;
+	width : 3.8em;
+	margin-left: 2em;
+	margin-top: 1.3em;
+}
+
+#motto {
+	font-family: 'Cutive', serif, 'Lekton', sans-serif;
+	font-size: .8em;
+	font-weight: bolder;
+	width: 11%;
+	margin-left: 9em;
+	margin-top: -4em;
+	color: white !important;
+}
+
+#tagline {
+	float: right;
+	font-size: .8em;
+	margin-right: 1.2em;
+	margin-top: -2em;
+	padding-right: 1em;
+	word-spacing: 1em;
+	font-family: 'Cutive', serif, 'Lekton', sans-serif;
+	color: #999999 !important;
+	text-decoration: none !important;
+}
+
+#header {
+	background-color: #333333;
+	width: 100%;
+	top: 0;
+	padding-bottom: 2em;
+
+}
+
+header {
+	width: 100%;
+	top: 0;
+}
+
+#tagline:visited {
+	color: white !important;
+	text-decoration: none !important;
+}

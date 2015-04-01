@@ -1,0 +1,21 @@
+	<img src='<%=@post.image%>'>
+	<%=@post.content%>
+	<%=@post.user.user_name%>
+
+
+
+	
+	<div id="comment_section">
+		<%@comments.each do |comment|%>
+		<% if false %>
+			<p id="comment_poster"><a class="user_index" href="/users/<%=comment.user.id%>"><%=comment.user.user_name%></a></p>
+			<p id="comment"><%=comment.content%></p>
+			<p id="reply">reply</p>
+		<%end%>
+
+			<%= erb :_new_comment, layout: false, locals: {comment: comment} %>
+		<% end%>
+		
+	</div>
+
+	<a id="add_comment" href="/posts/<%=@post.id%>/comments/new">Add Comment</a>

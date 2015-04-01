@@ -1,6 +1,6 @@
 get '/posts/:id/comments/new' do
 	@post = Post.find_by(:id => params[:id])
-	erb :"comments/new"#, layout: !request.xhr?
+	erb :"comments/new", layout: !request.xhr?
 end
 
 post '/posts/:id/comments/new' do
@@ -8,6 +8,7 @@ post '/posts/:id/comments/new' do
 	@comment =  Comment.new( content: params[:content],
                              user_id: session[:user_id],
                              post_id: @post.id) 
+	p @comment
 
 	if @comment.save
 		if request.xhr?
