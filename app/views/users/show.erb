@@ -12,7 +12,7 @@
 	<p class="user_attr">about: <%=@user.bio%></p>
 </div>
 <div >
-	<%@user.posts.each do |post|%>
+	<%@user.posts.reverse.each do |post|%>
 		<a href='/posts/<%=post.id%>/comments'><img id="posts" src='<%=post.image%>'></a>
 		<p class='post_content'><%=post.content%><p>
 

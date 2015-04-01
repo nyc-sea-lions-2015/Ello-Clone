@@ -46,5 +46,6 @@ end
 delete '/users/:id/delete' do
 	@user= Post.find_by(:id => params[:id])
 	@user.destroy
+	session[:user_id] = nil
 	redirect '/'
 end

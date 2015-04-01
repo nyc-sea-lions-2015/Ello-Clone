@@ -19,7 +19,10 @@ get '/auth/signup' do
 end
 
 post '/auth/signup' do
-	@user = User.create(params)
+	@user = User.new(
+						user_name: params[:user_name],
+						email: params[:email],
+						password: params[:password])
 
 	if @user.save
 		session[:user_id] = @user.id

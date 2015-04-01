@@ -106,3 +106,7 @@ footer {
 	color: #333 !important;
 }
 
+a:visited {
+	text-decoration: none;
+}
+
