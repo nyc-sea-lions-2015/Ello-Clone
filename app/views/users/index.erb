@@ -14,7 +14,7 @@
 <div >
 	<%@user.posts.each do |post|%>
 		<a href='/posts/<%=post.id%>/comments'><img id="posts" src='<%=post.image%>'></a>
-		<%=post.content%>
+		<p><%=post.content%>
 
 	<% end%>
 </div>

@@ -1,13 +1,13 @@
 get '/users/:id' do
 	@user = User.find_by(:id => params[:id])
 	@posts=@user.posts
-	erb :'users/show'
+	erb :'users/index'
 end
 
 get '/users/home/:id' do
 	@user = User.find_by(:id => params[:id])
 	p @user
-	erb :'users/index'
+	erb :'users/show'
 end
 
 

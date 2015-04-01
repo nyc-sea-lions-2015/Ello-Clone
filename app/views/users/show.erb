@@ -1,20 +1,21 @@
-<div id="user_prof">
-	<p class="user_attr">user: <%=@user.user_name%></p>
-	<p class="user_attr">about: <%=@user.bio%></p>
-	<p class="user_footer"><a href=>submissions</a></p>
-</div>
 
 <div id='header_img'>
 	<img  id="background_header" src="<%=@user.header_image%>">
 </div>
 
-<div id="avatar">
-	
+<div >
+	<img  id="avatar" src="<%=@user.avatar%>">
 </div>
 
-<div>
+<div id="user_prof">
+	<p class="user_attr">@<%=@user.user_name%></p>
+	<p class="user_attr">about: <%=@user.bio%></p>
+	<a href='/users/home/<%=@user.id%>/posts/new'><p class="user_attr">add post <%=@user.bio%></p></a>
+</div>
+<div >
 	<%@user.posts.each do |post|%>
-		<%=post.image%>
+		<a href='/posts/<%=post.id%>/comments'><img id="posts" src='<%=post.image%>'></a>
 		<%=post.content%>
+
 	<% end%>
 </div>

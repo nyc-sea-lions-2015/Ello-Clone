@@ -26,7 +26,7 @@ post '/users/home/:id/posts/new' do
 
 
 	if @post.save 
-		redirect "/posts/#{params.id}/comments"
+		redirect "/users/home/#{params[:id]}"
 	else
 		[404, 'This comment could not be created']
 	end

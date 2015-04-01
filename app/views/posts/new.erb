@@ -1,0 +1,10 @@
+<div id="new_comment">
+	<form id="comment_form" action="/users/home/<%=@user.id%>/posts/new" method="POST">
+		<h3>image</h3>
+		<input type='text' name='image'/>
+		<h3>caption</h3>
+		<textarea name='content' rows="6" cols="60" ></textarea>
+		<input id="comment_submit" type="submit">
+		
+	</form>
+</div>
