@@ -44,3 +44,54 @@ header {
 	color: white !important;
 	text-decoration: none !important;
 }
+
+#main {
+	background-image: url('/imgs/ello_big.jpg');
+	width: 100%;
+	height:35em;
+	margin-top: -7em;
+	line-height: 1.4;
+	background-size: cover;
+	margin-bottom: 1em;
+}
+
+footer {
+	width: 100%;
+	height: 6em;
+	position: absolute;
+	bottom: 0;
+	background-color: #333333;
+	text-align: center;
+	margin-bottom: -8em;
+}
+
+#footer {
+	margin-top: .7em;
+}
+
+.social_media {
+	width: 3em;
+	height: 3em;
+}
+
+#sign_up {
+	font-family: 'Cutive', serif, 'Lekton', sans-serif;
+	background-color: rgb(226, 219, 219);
+	width: 20%;
+	margin: 0 5px;
+	padding: 18px 26px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	text-shadow: 0 1px 0 #fff;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	white-space: nowrap;
+	text-decoration: none !important;
+	color: #333 !important;
+	display: inline-block;
+	border: solid 1px #bbb;
+	margin-left: 24em;
+	margin-top: 2em;
+}
+
