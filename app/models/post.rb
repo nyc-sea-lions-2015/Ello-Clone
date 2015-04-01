@@ -2,5 +2,5 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 	has_many :comments
 
-	validates :user, :picture, presence: true
+	validates :user, :image, presence: true
 end

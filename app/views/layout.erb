@@ -14,7 +14,7 @@
         <div id="header_words">
           <p> Manifesto About Store Privacy
           <% if session[:user_id] %>
-            <a id="home" href='/users/home/<%=session[:user_id]%>'>Home | </a>
+            <a id="home" href='/users/home/<%=session[:user_id]%>'>Home  </a>
             <a href='/auth/logout' id='logout'> Logout</a>
           <% else %>
             <a href='/auth/login' id='login'> Login</a> 
