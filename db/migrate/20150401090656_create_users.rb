@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
   	create_able :users do |t|
   		t.string :email, null: false, unique: true
   		t.string :password_digest, null: false
-  		t.string :name, null: true
+  		t.string :user_name, null: false
   		t.text   :bio, null: true
   		t.binary :header_image, null: true
   		t.binary :avatar, null: true
