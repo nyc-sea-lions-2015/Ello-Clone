@@ -8,13 +8,12 @@ post '/posts/:id/comments/new' do
 	@comment =  Comment.new( content: params[:content],
                              user_id: session[:user_id],
                              post_id: @post.id) 
-	p @comment
 
 	if @comment.save
 		if request.xhr?
 			erb :_new_comment, layout: false, locals: {comment: @comment}
 		else 
-		redirect "/posts/#{params[:id]}/comments"
+			redirect "/posts/#{params[:id]}/comments"
 		end
 	else
 		[404, 'This comment could not be created']
