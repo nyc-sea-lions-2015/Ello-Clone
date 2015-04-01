@@ -1,10 +1,12 @@
 get '/users/:id' do
 	@user = User.find_by(:id => params[:id])
+	@posts=@user.posts
 	erb :'users/show'
 end
 
 get '/users/home/:id' do
 	@user = User.find_by(:id => params[:id])
+	@followings = @user.followings
 	erb :'users/index'
 end
 
