@@ -46,7 +46,7 @@ header {
 	top: 0;
 }
 
-#tagline:visited {
+a:visited {
 	color: white !important;
 	text-decoration: none !important;
 }

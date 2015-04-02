@@ -4,12 +4,14 @@ end
 
 post '/auth/login' do
 	@user = User.find_by(email: params[:email])
-	p params[:email]
+
+	# Dont leave debug code lying around!
+	# p params[:email]
 	if @user && @user.authenticate(params[:password])
 		session[:user_id] = @user.id
-		redirect '/'
+		redirect '/' # Good redirect from POST
 	else
-		set_error("Login failed")
+		set_error("Login failed") # This method doesnt exist!!!
 		redirect '/login'
 	end
 end
@@ -19,10 +21,7 @@ get '/auth/signup' do
 end
 
 post '/auth/signup' do
-	@user = User.new(
-						user_name: params[:user_name],
-						email: params[:email],
-						password: params[:password])
+	@user = User.new(params) # Just pass the params hash when the object attributes match the params
 
 	if @user.save
 		session[:user_id] = @user.id

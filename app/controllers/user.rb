@@ -25,13 +25,14 @@ end
 
 put '/users/:id' do
 	@user = User.find_by(:id => params[:id])
-	
+
 	if @user
-		@user.user_name = params[:user_name]
-		@user.email = params[:email]
-		@user.bio = params[:bio]
-		@user.header_image = params[:header_image]
-		@user.avatar = params[:avatar]
+		@user.update(params)
+		# @user.user_name = params[:user_name]
+		# @user.email = params[:email]
+		# @user.bio = params[:bio]
+		# @user.header_image = params[:header_image]
+		# @user.avatar = params[:avatar]
 
 		if @user.save
 			redirect "/users/#{params[:id]}"

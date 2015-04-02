@@ -6,7 +6,7 @@ $(document).ready(function() {
     $(this).hide();
 
     var url = $(this).attr('href');
-   
+
 
     $.get(url, function(serverResponse, status, request){
       $('#comment_section').append(serverResponse);
@@ -38,7 +38,7 @@ $(document).ready(function() {
     $(this).hide();
 
     var url = $(this).attr('href');
-   
+
 
     $.get(url, function(serverResponse, status, request){
       $('#user_prof').append(serverResponse);
@@ -55,6 +55,7 @@ $(document).ready(function() {
       $('#post_section').append(serverResponse);
     });
 
+    /* Make sure that these have no dependency on the JS above returning! */
     $(this).parent('div').remove();
 
     $('#add_post').show();
